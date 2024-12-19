@@ -32,6 +32,7 @@ public class DayOfYear {
             days += months[i];
         }
         days += day;
+        //多做了 如果是閏年且月份大於2月的話，天數才加1
         if(year % 400 ==0 || (year % 4 == 0 && year % 100 != 0)&& month > 2){
             days++;
         }
