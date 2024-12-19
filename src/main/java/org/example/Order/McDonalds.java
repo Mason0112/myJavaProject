@@ -33,6 +33,7 @@ public class McDonalds {
 
     }
     public void showMenu(){
+        //把menu的資料都先拿出來
         Set<Map.Entry<String, Item>> entries = menu.entrySet();
         for (Map.Entry<String, Item> entry : entries) {
             System.out.println(entry.getValue());

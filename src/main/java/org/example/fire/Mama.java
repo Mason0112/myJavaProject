@@ -35,6 +35,7 @@ public class Mama {
             Thread MingThread2 = new Thread() {
                 @Override
                 public void run() {
+                    System.out.println(Thread.currentThread().getName());
                     System.out.println("go buy soy2");
                     try {
                         sleep(7000);

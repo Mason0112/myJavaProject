@@ -7,6 +7,7 @@ import java.util.Calendar;
 
 public class DayOfYear {
     public static void main(String[] args) throws IOException {
+        int [] months = {31,28,31,30,31,30,31,31,30,31,30,31};
         Calendar now = Calendar.getInstance();
         int year = now.get(Calendar.YEAR);
         int month = now.get(Calendar.MONTH)+1;
@@ -26,5 +27,16 @@ public class DayOfYear {
         System.out.println(year);
         System.out.println(month);
         System.out.println(day);
+        int days = 0;
+        for(int i = 0; i < month-1; i++){
+            days += months[i];
+        }
+        days += day;
+        if(year % 400 ==0 || (year % 4 == 0 && year % 100 != 0)&& month > 2){
+            days++;
+        }
+        System.out.println(days);
+
+
     }
 }
